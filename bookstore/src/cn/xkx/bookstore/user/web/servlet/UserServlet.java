@@ -74,7 +74,7 @@ public class UserServlet extends BaseServlet {
 		User form = CommonUtils.toBean(request.getParameterMap(), User.class);
 		// 补全
 		form.setUid(CommonUtils.uuid());
-		form.setCode(CommonUtils.uuid() + CommonUtils.uuid());
+		form.setCode(String.valueOf((int) (1 + Math.random() * 2000)));
 		/*
 		 * 输入校验 1. 创建一个Map，用来封装错误信息，其中key为表单字段名称，值为错误信息
 		 */

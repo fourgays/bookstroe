@@ -44,7 +44,7 @@ public class UserService {
 		/*
 		 * 修改用户状态 
 		 */
-		userDao.updateState(user.getUid(), true);
+		userDao.updateState(user.getEmail(), true);
 		
 	}
 	

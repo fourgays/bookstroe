@@ -65,11 +65,11 @@ public class UserDao {
 	/*
 	 * 激活用户状态
 	 */
-	public void updateState(String uid, boolean state)
+	public void updateState(String email, boolean state)
 	{
 		try {
-			String sql = "update tb_user set state=? where uid=?";
-			qr.update(sql,state,uid);
+			String sql = "update tb_user set state=? where email=?";
+			qr.update(sql,state,email);
 		} catch (Exception e) {
 			// TODO: handle exception
 		}
